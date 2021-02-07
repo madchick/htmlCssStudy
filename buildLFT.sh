@@ -27,4 +27,4 @@ cp -rf "/Users/macbook/Projects/reactStudy/nomflix/build/." "/Users/macbook/Proj
 cp -rf "/Users/macbook/Projects/reactStudy/movie_app/build/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/movie"
 cp -rf "/Users/macbook/Projects/javascriptStudy/cityroads/dist/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/cityroads"
 cp -rf "/Users/macbook/Projects/htmlCssStudy/animalFace/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/animalface"
-cp -rf "/Users/macbook/Projects/htmlCssStudy/lunckyNewYear/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/lunckyNewYear"
+cp -rf "/Users/macbook/Projects/htmlCssStudy/luckyNewYear/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/luckyNewYear"
