@@ -28,3 +28,4 @@ cp -rf "/Users/macbook/Projects/reactStudy/movie_app/build/." "/Users/macbook/Pr
 cp -rf "/Users/macbook/Projects/javascriptStudy/cityroads/dist/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/cityroads"
 cp -rf "/Users/macbook/Projects/htmlCssStudy/animalFace/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/animalface"
 cp -rf "/Users/macbook/Projects/htmlCssStudy/luckyNewYear/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/luckyNewYear"
+cp -rf "/Users/macbook/Projects/htmlCssStudy/goodMemory/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/goodMemory"
