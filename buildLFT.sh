@@ -21,11 +21,11 @@ npm run build
 cd ..
 cd ..
 cd htmlCssStudy
-cp -rf "/Users/macbook/Projects/reactStudy/littlefunthings/build/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings"
-cp -rf "/Users/macbook/Projects/reactStudy/gifmaker/build/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/gifmaker"
-cp -rf "/Users/macbook/Projects/reactStudy/nomflix/build/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/nomflix"
-cp -rf "/Users/macbook/Projects/reactStudy/movie_app/build/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/movie"
-cp -rf "/Users/macbook/Projects/javascriptStudy/cityroads/dist/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/cityroads"
-cp -rf "/Users/macbook/Projects/htmlCssStudy/animalFace/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/animalface"
-cp -rf "/Users/macbook/Projects/htmlCssStudy/luckyNewYear/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/luckyNewYear"
-cp -rf "/Users/macbook/Projects/htmlCssStudy/goodMemory/." "/Users/macbook/Projects/htmlCssStudy/littlefunthings/goodMemory"
+cp -rf "/Users/madchick/Projects/reactStudy/littlefunthings/build/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings"
+cp -rf "/Users/madchick/Projects/reactStudy/gifmaker/build/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/gifmaker"
+cp -rf "/Users/madchick/Projects/reactStudy/nomflix/build/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/nomflix"
+cp -rf "/Users/madchick/Projects/reactStudy/movie_app/build/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/movie"
+cp -rf "/Users/madchick/Projects/javascriptStudy/cityroads/dist/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/cityroads"
+cp -rf "/Users/madchick/Projects/htmlCssStudy/animalFace/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/animalface"
+cp -rf "/Users/madchick/Projects/htmlCssStudy/luckyNewYear/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/luckyNewYear"
+cp -rf "/Users/madchick/Projects/htmlCssStudy/goodMemory/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/goodMemory"
