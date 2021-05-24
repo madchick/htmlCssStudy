@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <button id="goget" onclick="gogogo('서버 포트 1개로 통합 가능한지 검토의견 부탁드립니다.')">음성 듣기</button><br/><br/>
+    <audio controls autoplay hidden id="korplayer" src="" type="audio/mp3"></audio>
+
+    <script type="text/javascript">
+
+function loadXHR(speakText) {
+    return new Promise((resolve, reject) => {
+        try {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize");
+            xhr.responseType = "blob";
+            xhr.setRequestHeader("Authorization", "d3cb4a2a5826dd35d794c2e14a2afd15");
+            xhr.setRequestHeader("Content-type", "application/xml");
+            xhr.onerror = event => {
+                reject(`Network error: ${event}`);
+            };
+            xhr.onload = () => {
+                if (xhr.status === 200) {
+                    resolve(xhr.response);
+                } else {
+                    reject(`XHR load error: ${xhr.statusText}`);
+                }
+            };
+            xhr.send("<speak>" + speakText + "</speak>");
+        } catch (err) {
+            reject(err.message);
+        }
+    });
+}
+
+function gogogo(speakText) {
+    loadXHR(speakText)
+        .then(
+            (result) => { 
+                // console.log(result);
+                document.getElementById('korplayer').src = window.URL.createObjectURL(result);
+            },
+            (error) => { 
+                console.log(error);
+            }           
+        );
+}
+
+    </script>
+</body>
+</html>
