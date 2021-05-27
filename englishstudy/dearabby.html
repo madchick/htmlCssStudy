@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>미친병아리의 추억사진</title>
+    <title>Dear Abby - 영어 기사 듣기</title>
 
     <meta property="og:title" content="미친병아리의 추억사진"/>
     <meta property="og:description" content="출장이 좋은점 한가지"/>
@@ -21,6 +21,46 @@
   gtag('js', new Date());
 
   gtag('config', 'G-XZ1TJDT1LZ');
+</script>
+
+<script type="text/javascript">
+function loadXHR(speakText) {
+    return new Promise((resolve, reject) => {
+        try {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize");
+            xhr.responseType = "blob";
+            xhr.setRequestHeader("Authorization", "0ef9a345b87fbcf39ecbe423634ebe8e");
+            xhr.setRequestHeader("Content-type", "application/xml");
+            xhr.onerror = event => {
+                reject(`Network error: ${event}`);
+            };
+            xhr.onload = () => {
+                if (xhr.status === 200) {
+                    resolve(xhr.response);
+                } else {
+                    reject(`XHR load error: ${xhr.statusText}`);
+                }
+            };
+            xhr.send("<speak>" + speakText + "</speak>");
+        } catch (err) {
+            reject(err.message);
+        }
+    });
+}
+
+function kakaoSpeak(speakText) {
+    loadXHR(speakText)
+        .then(
+            (result) => { 
+                // console.log(result);
+                document.getElementById('kakaoSpeak').src = window.URL.createObjectURL(result);
+            },
+            (error) => { 
+                console.log(error);
+            }           
+        );
+}
 </script>
     
     <style>
@@ -64,20 +104,24 @@
 
             margin: 40px auto 0px auto;
         }
-        .map {
+        .img1 {
             width: 500px;
-            height: 500px;
+            height: 600px;
+
+            background-image: url('image.jpg');
+            background-position: center;
+            background-size: cover;
 
             margin-right: 30px;
             border-radius: 24px;
         }
         .story {
             width: 450px;
-            height: 500px;
+            height: 600px;
         }
-        .img {
+        .img2 {
             width: 450px;
-            height: 300px;
+            height: 150px;
 
             background-image: url('image.jpg');
             background-position: center;
@@ -99,7 +143,7 @@
             line-height: 24px;
         }
         
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 1024px) {
             h1 {
                 font-size: 26px;
             }
@@ -107,9 +151,9 @@
                 flex-direction: column;
                 width: 100%;
             }
-            .map {
+            .img1 {
                 width: 100%;
-                height: 200px;
+                height: 600px;
 
                 margin: 0;
             }
@@ -120,12 +164,11 @@
                 margin-top: 10px;
                 margin-bottom: 10px;
             }
-
-            .img {
+            .img2 {
                 width: 100%;
                 height: 200px;
             }
-        } 
+        }
     </style>
 </head>
 <body>
@@ -139,49 +182,31 @@
 </div>
 <br/><br/>
 
+<audio controls autoplay hidden id="kakaoSpeak" src="" type="audio/mp3"></audio>
+
     <div class="mytitle">
-        <h1>출장이 좋은점 한가지</h1>
-        <a class="btn" href="http://spartacodingclub.shop/free/202105/exhibition" target="_blank">모든 수강생들의 추억 보러가기 ></a>
+        <h1>Dear Abby - 영어 기사 듣기 (리스닝 연습)</h1>
+        <a class="btn" href="http://spartacodingclub.shop/free/202105/exhibition" target="_blank">전체 리스트 보러가기 ></a>
     </div>
     <div class="box">
-        <div class="map" id="map"></div>
+        <div class="img1"></div>
         <div class="story">
-            <div class="img"></div>
-            <h2>출장은 말이야</h2>
-            <h3>다 맘에 안드는데, 딱 한가지만 좋아</h3>
-            <p>
-                출장의 재미는
-                혼자 침대에서 담배 피며,
-                음악 소리도 크게 틀어 놓고,
-                TV 소리도 크게 틀어 놓고,
-                맘대로 뒹굴 거릴 수 있다는 점
-            </p>
+            <div class="img2"></div>
+            <h2>Musician in Multiple Bands Complicates Scheduling Needs</h2>
+            <h3>DEAR ABBY | MAY 25TH, 2021 | LETTER 1 OF 3</h3>
+<p>
+DEAR ABBY: I am in a rock band with some friends. All of us are in our 50s and 60s. We have been playing together for the last three years. Last year, our bass player joined another band (while staying in ours) because another friend was in it, but they broke up because of COVID. Now that music venues are opening up again, he has joined yet another group. I'm a loyal guy, and it bothers me that he doesn't seem as loyal to our band. He says he can easily do both, but for me, it causes booking issues because the other band will be blocking out dates that we might be able to book. I see no other conflicts. He even asked if I was interested in joining the other band, too, because he figured that if he can't be in two places at once, it might as well be both of us. Should we cut our losses and replace him? Loyalty is really important to us. -- ROCKING ON IN TEXAS
+</p>
+<P>
+DEAR ROCKING ON: Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.
+</P>
+            <button onclick="kakaoSpeak('Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.')">영어로 듣기</button><br/><br/>
+<br/><br/>
         </div>
     </div>
 
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dab14d2ffc5521ba426ef4d715ca0629"></script>
-    <script>
-        var markerPosition = new kakao.maps.LatLng(37.41672648990101, 126.88479972706456)
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
-            mapOption = { 
-                center: markerPosition, // 지도의 중심좌표
-                level: 3 // 지도의 확대 레벨
-            };
-
-        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-        var imageSrc = "https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/2021_05_free_parents/sparta-marker.png"; 
-        var imageSize = new kakao.maps.Size(65, 86); 
-        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
-        
-        var marker = new kakao.maps.Marker({
-            map: map,
-            position: markerPosition,
-            image : markerImage
-        });      
-    </script>
-
 <br/><br/>
+
 <div>
 <ins class="kakao_ad_area" style="display:none;" 
  data-ad-unit    = "DAN-7nhaOr1zz7XjcNFd" 

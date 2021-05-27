@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>미친병아리의 추억사진</title>
+    <title>K-Drama favorate lines and qoutes</title>
 
-    <meta property="og:title" content="미친병아리의 추억사진"/>
-    <meta property="og:description" content="출장이 좋은점 한가지"/>
-    <meta property="og:image" content="image.jpg"/>
+    <meta property="og:title" content="K-Drama favorate lines and qoutes"/>
+    <meta property="og:description" content="이태원 클라쓰"/>
+    <meta property="og:image" content="image1.jpg"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
@@ -22,6 +22,46 @@
 
   gtag('config', 'G-XZ1TJDT1LZ');
 </script>
+
+<script type="text/javascript">
+function loadXHR(speakText) {
+    return new Promise((resolve, reject) => {
+        try {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize");
+            xhr.responseType = "blob";
+            xhr.setRequestHeader("Authorization", "d3cb4a2a5826dd35d794c2e14a2afd15");
+            xhr.setRequestHeader("Content-type", "application/xml");
+            xhr.onerror = event => {
+                reject(`Network error: ${event}`);
+            };
+            xhr.onload = () => {
+                if (xhr.status === 200) {
+                    resolve(xhr.response);
+                } else {
+                    reject(`XHR load error: ${xhr.statusText}`);
+                }
+            };
+            xhr.send("<speak>" + speakText + "</speak>");
+        } catch (err) {
+            reject(err.message);
+        }
+    });
+}
+
+function kakaoSpeak(speakText) {
+    loadXHR(speakText)
+        .then(
+            (result) => { 
+                // console.log(result);
+                document.getElementById('kakaoSpeak').src = window.URL.createObjectURL(result);
+            },
+            (error) => { 
+                console.log(error);
+            }           
+        );
+}
+</script>
     
     <style>
         * {
@@ -32,6 +72,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            text-align: center;
 
             margin-top: 30px;
         }
@@ -64,22 +105,26 @@
 
             margin: 40px auto 0px auto;
         }
-        .map {
+        .img1 {
             width: 500px;
-            height: 500px;
+            height: 600px;
+
+            background-image: url('image1.jpg');
+            background-position: center;
+            background-size: cover;
 
             margin-right: 30px;
             border-radius: 24px;
         }
         .story {
             width: 450px;
-            height: 500px;
+            height: 600px;
         }
-        .img {
+        .img2 {
             width: 450px;
-            height: 300px;
+            height: 200px;
 
-            background-image: url('image.jpg');
+            background-image: url('image2.jpg');
             background-position: center;
             background-size: cover;
 
@@ -99,7 +144,7 @@
             line-height: 24px;
         }
         
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 1024px) {
             h1 {
                 font-size: 26px;
             }
@@ -107,9 +152,9 @@
                 flex-direction: column;
                 width: 100%;
             }
-            .map {
+            .img1 {
                 width: 100%;
-                height: 200px;
+                height: 600px;
 
                 margin: 0;
             }
@@ -120,12 +165,11 @@
                 margin-top: 10px;
                 margin-bottom: 10px;
             }
-
-            .img {
+            .img2 {
                 width: 100%;
                 height: 200px;
             }
-        } 
+        }
     </style>
 </head>
 <body>
@@ -139,49 +183,35 @@
 </div>
 <br/><br/>
 
+<audio controls autoplay hidden id="kakaoSpeak" src="" type="audio/mp3"></audio>
+
     <div class="mytitle">
-        <h1>출장이 좋은점 한가지</h1>
-        <a class="btn" href="http://spartacodingclub.shop/free/202105/exhibition" target="_blank">모든 수강생들의 추억 보러가기 ></a>
+        <h1>K-Drama favorate lines and qoutes</br>Listen and speak in Korean</h1>
+        <a class="btn" href="http://spartacodingclub.shop/free/202105/exhibition" target="_blank">Show all items  ></a>
     </div>
     <div class="box">
-        <div class="map" id="map"></div>
+        <div class="img1"></div>
         <div class="story">
-            <div class="img"></div>
-            <h2>출장은 말이야</h2>
-            <h3>다 맘에 안드는데, 딱 한가지만 좋아</h3>
-            <p>
-                출장의 재미는
-                혼자 침대에서 담배 피며,
-                음악 소리도 크게 틀어 놓고,
-                TV 소리도 크게 틀어 놓고,
-                맘대로 뒹굴 거릴 수 있다는 점
-            </p>
+            <div class="img2"></div>
+            <h2>이태원 클라쓰</br>Itaewon Class</h2>
+            <h3>JTBC | 16부작 | 2020.01.31 ~ 03.21</h3>
+<p>
+Frankly, everyone knows how to become successful.</br>
+How to becaom successful? How do you do it?</br>
+You just need to work hard, like crazy. But it feels like such a chore.</br>
+</p>
+<P>
+사실 성공하는 방법 같은 거는 누구나 다 알고 있는 거거든요.</br>
+성공 방법이요? 그게 뭘까?</br>
+그냥, 미친 듯이 파이팅 하면 돼요. 그게 귀찮은거지.
+</P>
+            <button onclick="kakaoSpeak('그냥, 미친 듯이 파이팅 하면 돼요. 그게 귀찮은거지.')">Listen</button><br/><br/>
+<br/><br/>
         </div>
     </div>
 
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dab14d2ffc5521ba426ef4d715ca0629"></script>
-    <script>
-        var markerPosition = new kakao.maps.LatLng(37.41672648990101, 126.88479972706456)
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
-            mapOption = { 
-                center: markerPosition, // 지도의 중심좌표
-                level: 3 // 지도의 확대 레벨
-            };
-
-        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-        var imageSrc = "https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/2021_05_free_parents/sparta-marker.png"; 
-        var imageSize = new kakao.maps.Size(65, 86); 
-        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
-        
-        var marker = new kakao.maps.Marker({
-            map: map,
-            position: markerPosition,
-            image : markerImage
-        });      
-    </script>
-
 <br/><br/>
+
 <div>
 <ins class="kakao_ad_area" style="display:none;" 
  data-ad-unit    = "DAN-7nhaOr1zz7XjcNFd" 
