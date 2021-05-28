@@ -26,12 +26,27 @@
 <script type="text/javascript">
 function loadXHR(speakText) {
     return new Promise((resolve, reject) => {
+        let sendData = {
+  "audioConfig": {
+    "audioEncoding": "MP3",
+    "pitch": 0,
+    "speakingRate": 1
+  },
+  "input": {
+    "text": ""
+  },
+  "voice": {
+    "languageCode": "en-US",
+    "name": "en-US-Wavenet-D"
+  }
+};
+sendData.input.text = speakText;
+
         try {
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize");
-            xhr.responseType = "blob";
-            xhr.setRequestHeader("Authorization", "0ef9a345b87fbcf39ecbe423634ebe8e");
-            xhr.setRequestHeader("Content-type", "application/xml");
+            xhr.open("POST", "https://texttospeech.googleapis.com/v1/text:synthesize?key=AIzaSyAqHvBdn5-cTDFBgMjcs8E1tZlXPEmR1V0");
+            xhr.setRequestHeader("Authorization", "Bearer");
+            xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
             xhr.onerror = event => {
                 reject(`Network error: ${event}`);
             };
@@ -42,19 +57,20 @@ function loadXHR(speakText) {
                     reject(`XHR load error: ${xhr.statusText}`);
                 }
             };
-            xhr.send("<speak>" + speakText + "</speak>");
+            xhr.send(JSON.stringify(sendData));
         } catch (err) {
             reject(err.message);
         }
     });
 }
 
-function kakaoSpeak(speakText) {
+function googleSpeak(speakText) {
     loadXHR(speakText)
         .then(
             (result) => { 
-                // console.log(result);
-                document.getElementById('kakaoSpeak').src = window.URL.createObjectURL(result);
+                let resultData = JSON.parse(result);
+                // console.log(resultData.audioContent);
+                document.getElementById('googleSpeak').src = "data:audio/mp3;base64," + resultData.audioContent;
             },
             (error) => { 
                 console.log(error);
@@ -182,11 +198,11 @@ function kakaoSpeak(speakText) {
 </div>
 <br/><br/>
 
-<audio controls autoplay hidden id="kakaoSpeak" src="" type="audio/mp3"></audio>
+<audio controls autoplay hidden id="googleSpeak" src="" type="audio/mp3"></audio>
 
     <div class="mytitle">
         <h1>Dear Abby - 영어 기사 듣기 (리스닝 연습)</h1>
-        <a class="btn" href="http://spartacodingclub.shop/free/202105/exhibition" target="_blank">전체 리스트 보러가기 ></a>
+        <a class="btn" href="index.html">전체 리스트 보러가기 ></a>
     </div>
     <div class="box">
         <div class="img1"></div>
@@ -200,7 +216,7 @@ DEAR ABBY: I am in a rock band with some friends. All of us are in our 50s and 6
 <P>
 DEAR ROCKING ON: Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.
 </P>
-            <button onclick="kakaoSpeak('Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.')">영어로 듣기</button><br/><br/>
+            <button onclick="googleSpeak('Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.')">영어로 듣기</button><br/><br/>
 <br/><br/>
         </div>
     </div>
