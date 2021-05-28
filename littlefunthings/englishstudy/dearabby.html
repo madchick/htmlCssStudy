@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-Drama favorate lines and qoutes</title>
+    <title>Dear Abby - 영어 기사 듣기</title>
 
-    <meta property="og:title" content="K-Drama favorate lines and qoutes"/>
-    <meta property="og:description" content="이태원 클라쓰"/>
-    <meta property="og:image" content="image1.jpg"/>
+    <meta property="og:title" content="미친병아리의 추억사진"/>
+    <meta property="og:description" content="출장이 좋은점 한가지"/>
+    <meta property="og:image" content="image.jpg"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
@@ -26,12 +26,27 @@
 <script type="text/javascript">
 function loadXHR(speakText) {
     return new Promise((resolve, reject) => {
+        let sendData = {
+  "audioConfig": {
+    "audioEncoding": "MP3",
+    "pitch": 0,
+    "speakingRate": 1
+  },
+  "input": {
+    "text": ""
+  },
+  "voice": {
+    "languageCode": "en-US",
+    "name": "en-US-Wavenet-D"
+  }
+};
+sendData.input.text = speakText;
+
         try {
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize");
-            xhr.responseType = "blob";
-            xhr.setRequestHeader("Authorization", "d3cb4a2a5826dd35d794c2e14a2afd15");
-            xhr.setRequestHeader("Content-type", "application/xml");
+            xhr.open("POST", "https://texttospeech.googleapis.com/v1/text:synthesize?key=AIzaSyAqHvBdn5-cTDFBgMjcs8E1tZlXPEmR1V0");
+            xhr.setRequestHeader("Authorization", "Bearer");
+            xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
             xhr.onerror = event => {
                 reject(`Network error: ${event}`);
             };
@@ -42,19 +57,20 @@ function loadXHR(speakText) {
                     reject(`XHR load error: ${xhr.statusText}`);
                 }
             };
-            xhr.send("<speak>" + speakText + "</speak>");
+            xhr.send(JSON.stringify(sendData));
         } catch (err) {
             reject(err.message);
         }
     });
 }
 
-function kakaoSpeak(speakText) {
+function googleSpeak(speakText) {
     loadXHR(speakText)
         .then(
             (result) => { 
-                // console.log(result);
-                document.getElementById('kakaoSpeak').src = window.URL.createObjectURL(result);
+                let resultData = JSON.parse(result);
+                // console.log(resultData.audioContent);
+                document.getElementById('googleSpeak').src = "data:audio/mp3;base64," + resultData.audioContent;
             },
             (error) => { 
                 console.log(error);
@@ -72,7 +88,6 @@ function kakaoSpeak(speakText) {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
 
             margin-top: 30px;
         }
@@ -109,7 +124,7 @@ function kakaoSpeak(speakText) {
             width: 500px;
             height: 600px;
 
-            background-image: url('image1.jpg');
+            background-image: url('image.jpg');
             background-position: center;
             background-size: cover;
 
@@ -122,9 +137,9 @@ function kakaoSpeak(speakText) {
         }
         .img2 {
             width: 450px;
-            height: 200px;
+            height: 150px;
 
-            background-image: url('image2.jpg');
+            background-image: url('image.jpg');
             background-position: center;
             background-size: cover;
 
@@ -183,32 +198,30 @@ function kakaoSpeak(speakText) {
 </div>
 <br/><br/>
 
-<audio controls autoplay hidden id="kakaoSpeak" src="" type="audio/mp3"></audio>
+<audio controls autoplay hidden id="googleSpeak" src="" type="audio/mp3"></audio>
 
     <div class="mytitle">
-        <h1>K-Drama favorate lines and qoutes</br>Listen and speak in Korean</h1>
-        <a class="btn" href="index.html">Show all items  ></a>
+        <h1>Dear Abby - 영어 기사 듣기 (리스닝 연습)</h1>
+        <a class="btn" href="index.html">전체 리스트 보러가기 ></a>
     </div>
     <div class="box">
         <div class="img1"></div>
         <div class="story">
             <div class="img2"></div>
-            <h2>이태원 클라쓰</br>Itaewon Class</h2>
-            <h3>JTBC | 16부작 | 2020.01.31 ~ 03.21</h3>
+            <h2>Musician in Multiple Bands Complicates Scheduling Needs</h2>
+            <h3>DEAR ABBY | MAY 25TH, 2021 | LETTER 1 OF 3</h3>
 <p>
-Frankly, everyone knows how to become successful.</br>
-How to becaom successful? How do you do it?</br>
-You just need to work hard, like crazy. But it feels like such a chore.</br>
+DEAR ABBY: I am in a rock band with some friends. All of us are in our 50s and 60s. We have been playing together for the last three years. Last year, our bass player joined another band (while staying in ours) because another friend was in it, but they broke up because of COVID. Now that music venues are opening up again, he has joined yet another group. I'm a loyal guy, and it bothers me that he doesn't seem as loyal to our band. He says he can easily do both, but for me, it causes booking issues because the other band will be blocking out dates that we might be able to book. I see no other conflicts. He even asked if I was interested in joining the other band, too, because he figured that if he can't be in two places at once, it might as well be both of us. Should we cut our losses and replace him? Loyalty is really important to us. -- ROCKING ON IN TEXAS
 </p>
 <P>
-사실 성공하는 방법 같은 거는 누구나 다 알고 있는 거거든요.</br>
-성공 방법이요? 그게 뭘까?</br>
-그냥, 미친 듯이 파이팅 하면 돼요. 그게 귀찮은거지.
+DEAR ROCKING ON: Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.
 </P>
-            <button onclick="kakaoSpeak('그냥, 미친 듯이 파이팅 하면 돼요. 그게 귀찮은거지.')">Listen</button></br>
-<center><a href="https://developers.kakao.com/docs/latest/ko/voice/common" target="kakaotts"><img src="voice_logo.png" width="350"></a></center><br/>
+            <button onclick="googleSpeak('Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.')">영어로 듣기</button> - <a href=https://cloud.google.com/text-to-speech target="googletts">powered by google cloud</a><br/><br/>
+<br/><br/>
         </div>
     </div>
+
+<br/><br/>
 
 <div>
 <ins class="kakao_ad_area" style="display:none;" 
