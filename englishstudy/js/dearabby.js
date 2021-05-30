@@ -59,32 +59,40 @@ let linesData;
 function onload() {
     textData1 = document.getElementById('linesSec1').innerText;
     textData1 = textData1.split(".");
+    console.log(textData1);
     textData2 = document.getElementById('linesSec2').innerText;
     textData2 = textData2.split(".");
+    console.log(textData2);
 
     linesIndex = 0;
     linesData = document.getElementById('linesSec1').innerText
         + document.getElementById('linesSec2').innerText;
+    alert(linesData);
     linesData = linesData.split(".");
+    console.log(linesData);
     linesIndexMax = linesData.length;
 
+    dataIndex = 0;
     newHTMLData = "";
-    for(i=0 ; i<textData1.length ; i++)
+    for(i=0 ; i<textData1.length-1 ; i++)
     {
-        newHTMLLine = "<a onclick='speakLine(" + i + ")'>" + textData1[i] + ". </a>";
+        newHTMLLine = "<a onclick='speakLine(" + dataIndex + ")'>" + textData1[i] + ". </a>";
         newHTMLData += newHTMLLine;
+        dataIndex++ ;
     }
     document.getElementById('linesSec1').innerHTML = newHTMLData;
     newHTMLData = "";
-    for(i=0 ; i<textData2.length ; i++)
+    for(i=0 ; i<textData2.length-1 ; i++)
     {
-        newHTMLLine = "<a onclick='speakLine(" + i + ")'>" + textData2[i] + ". </a>";
+        newHTMLLine = "<a onclick='speakLine(" + dataIndex + ")'>" + textData2[i] + ". </a>";
         newHTMLData += newHTMLLine;
+        dataIndex++;
     }
     document.getElementById('linesSec2').innerHTML = newHTMLData;
 }
 
 function speakLine(iIndex) {
+    alert(linesData[iIndex]);
     googleSpeak(linesData[iIndex]);
 }
 
