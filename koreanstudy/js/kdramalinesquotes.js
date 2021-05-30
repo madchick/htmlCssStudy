@@ -35,3 +35,39 @@ function kakaoSpeak(speakText) {
             }           
         );
 }
+
+let linesIndex;
+let linesIndexMax;
+let linesData;
+
+function onload() {
+    textData2 = document.getElementById('linesSec2').innerText;
+    textData2 = textData2.match(/[^\r\n]+/g);
+
+    linesIndex = 0;
+    linesIndexMax = textData2.length;
+    linesData = textData2;
+
+    newHTMLData = "";
+    for(i=0 ; i<linesIndexMax ; i++)
+    {
+        newHTMLLine = "<a onclick='kakaoSpeak(\"" + linesData[i] + "\")'>" + linesData[i] + "</a></br>";
+        newHTMLData += newHTMLLine;
+    }
+    document.getElementById('linesSec2').innerHTML = newHTMLData;
+}
+
+function speakLines() {
+    kakaoSpeak(linesData[linesIndex]);
+    let aud = document.getElementById("kakaoSpeak");
+    aud.onended = function() {
+        linesIndex++;
+        if(linesIndex<linesIndexMax) {
+            kakaoSpeak(linesData[linesIndex]);
+        }
+        else {
+            this.onended = null;
+            linesIndex = 0;
+        }
+    };
+}
