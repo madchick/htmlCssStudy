@@ -13,166 +13,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="./css/kdramalinesquotes.css">
+    <script src="./js/kdramalinesquotes.js"></script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ1TJDT1LZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-XZ1TJDT1LZ');
 </script>
 
-<script type="text/javascript">
-function loadXHR(speakText) {
-    return new Promise((resolve, reject) => {
-        try {
-            const xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize");
-            xhr.responseType = "blob";
-            xhr.setRequestHeader("Authorization", "d3cb4a2a5826dd35d794c2e14a2afd15");
-            xhr.setRequestHeader("Content-type", "application/xml");
-            xhr.onerror = event => {
-                reject(`Network error: ${event}`);
-            };
-            xhr.onload = () => {
-                if (xhr.status === 200) {
-                    resolve(xhr.response);
-                } else {
-                    reject(`XHR load error: ${xhr.statusText}`);
-                }
-            };
-            xhr.send("<speak>" + speakText + "</speak>");
-        } catch (err) {
-            reject(err.message);
-        }
-    });
-}
-
-function kakaoSpeak(speakText) {
-    loadXHR(speakText)
-        .then(
-            (result) => { 
-                // console.log(result);
-                document.getElementById('kakaoSpeak').src = window.URL.createObjectURL(result);
-            },
-            (error) => { 
-                console.log(error);
-            }           
-        );
-}
-</script>
-    
-    <style>
-        * {
-            font-family: 'Gothic A1', sans-serif; 
-        }
-        .mytitle {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            margin-top: 30px;
-        }
-        .btn {
-            width: 300px;
-            height: 40px;
-            border: 2px solid #e8344e;
-
-            text-align: center;
-            line-height: 40px;
-
-            text-decoration: none;
-            color:#e8344e;
-
-            font-weight: bold;
-            
-            border-radius: 150px;
-        }
-        .btn:hover {
-            color: white;
-            background-color: #e8344e;
-        }
-        .box {
-            width: 1000px;            
-
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            margin: 40px auto 0px auto;
-        }
-        .img1 {
-            width: 500px;
-            height: 600px;
-
-            background-image: url('image1.jpg');
-            background-position: center;
-            background-size: cover;
-
-            margin-right: 30px;
-            border-radius: 24px;
-        }
-        .story {
-            width: 450px;
-            height: 600px;
-        }
-        .img2 {
-            width: 450px;
-            height: 200px;
-
-            background-image: url('image2.jpg');
-            background-position: center;
-            background-size: cover;
-
-            border-radius: 24px;
-        }
-        .story > h2 {
-            color: green;
-            margin: 20px 0px 0px 0px;
-        }
-        .story > h3 {
-            color: gray;
-            margin-top: 5px;
-            font-weight: normal;
-            font-size: 16px;
-        }
-        .story > p {
-            line-height: 24px;
-        }
-        
-        @media screen and (max-width: 1024px) {
-            h1 {
-                font-size: 26px;
-            }
-            .box {
-                flex-direction: column;
-                width: 100%;
-            }
-            .img1 {
-                width: 100%;
-                height: 600px;
-
-                margin: 0;
-            }
-            .story {
-                width: 100%;
-                height: auto;
-
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-            .img2 {
-                width: 100%;
-                height: 200px;
-            }
-        }
-    </style>
 </head>
-<body>
+
+<body onload="onload()">
 
 <div>
 <ins class="kakao_ad_area" style="display:none;" 
@@ -195,18 +50,18 @@ function kakaoSpeak(speakText) {
             <div class="img2"></div>
             <h2>이태원 클라쓰</br>Itaewon Class</h2>
             <h3>JTBC | 16부작 | 2020.01.31 ~ 03.21</h3>
-<p>
+<p id="linesSec1">
 Frankly, everyone knows how to become successful.</br>
 How to becaom successful? How do you do it?</br>
 You just need to work hard, like crazy. But it feels like such a chore.</br>
 </p>
-<P>
+<P id="linesSec2">
 사실 성공하는 방법 같은 거는 누구나 다 알고 있는 거거든요.</br>
 성공 방법이요? 그게 뭘까?</br>
 그냥, 미친 듯이 파이팅 하면 돼요. 그게 귀찮은거지.
 </P>
-            <button onclick="kakaoSpeak('그냥, 미친 듯이 파이팅 하면 돼요. 그게 귀찮은거지.')">Listen</button></br>
-<center><a href="https://developers.kakao.com/docs/latest/ko/voice/common" target="kakaotts"><img src="voice_logo.png" width="350"></a></center><br/>
+            <button onclick="speakLines()">Listen</button></br>
+<center><a href="https://developers.kakao.com/docs/latest/ko/voice/common" target="kakaotts"><img src="./images/voice_logo.png" width="350"></a></center><br/>
         </div>
     </div>
 

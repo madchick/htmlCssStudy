@@ -13,181 +13,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="./css/dearabby.css">
+    <script src="./js/dearabby.js"></script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ1TJDT1LZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-XZ1TJDT1LZ');
 </script>
-
-<script type="text/javascript">
-function loadXHR(speakText) {
-    return new Promise((resolve, reject) => {
-        let sendData = {
-  "audioConfig": {
-    "audioEncoding": "MP3",
-    "pitch": 0,
-    "speakingRate": 1
-  },
-  "input": {
-    "text": ""
-  },
-  "voice": {
-    "languageCode": "en-US",
-    "name": "en-US-Wavenet-D"
-  }
-};
-sendData.input.text = speakText;
-
-        try {
-            const xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://texttospeech.googleapis.com/v1/text:synthesize?key=AIzaSyAqHvBdn5-cTDFBgMjcs8E1tZlXPEmR1V0");
-            xhr.setRequestHeader("Authorization", "Bearer");
-            xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
-            xhr.onerror = event => {
-                reject(`Network error: ${event}`);
-            };
-            xhr.onload = () => {
-                if (xhr.status === 200) {
-                    resolve(xhr.response);
-                } else {
-                    reject(`XHR load error: ${xhr.statusText}`);
-                }
-            };
-            xhr.send(JSON.stringify(sendData));
-        } catch (err) {
-            reject(err.message);
-        }
-    });
-}
-
-function googleSpeak(speakText) {
-    loadXHR(speakText)
-        .then(
-            (result) => { 
-                let resultData = JSON.parse(result);
-                // console.log(resultData.audioContent);
-                document.getElementById('googleSpeak').src = "data:audio/mp3;base64," + resultData.audioContent;
-            },
-            (error) => { 
-                console.log(error);
-            }           
-        );
-}
-</script>
     
-    <style>
-        * {
-            font-family: 'Gothic A1', sans-serif; 
-        }
-        .mytitle {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            margin-top: 30px;
-        }
-        .btn {
-            width: 300px;
-            height: 40px;
-            border: 2px solid #e8344e;
-
-            text-align: center;
-            line-height: 40px;
-
-            text-decoration: none;
-            color:#e8344e;
-
-            font-weight: bold;
-            
-            border-radius: 150px;
-        }
-        .btn:hover {
-            color: white;
-            background-color: #e8344e;
-        }
-        .box {
-            width: 1000px;            
-
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            margin: 40px auto 0px auto;
-        }
-        .img1 {
-            width: 500px;
-            height: 600px;
-
-            background-image: url('image.jpg');
-            background-position: center;
-            background-size: cover;
-
-            margin-right: 30px;
-            border-radius: 24px;
-        }
-        .story {
-            width: 450px;
-            height: 600px;
-        }
-        .img2 {
-            width: 450px;
-            height: 150px;
-
-            background-image: url('image.jpg');
-            background-position: center;
-            background-size: cover;
-
-            border-radius: 24px;
-        }
-        .story > h2 {
-            color: green;
-            margin: 20px 0px 0px 0px;
-        }
-        .story > h3 {
-            color: gray;
-            margin-top: 5px;
-            font-weight: normal;
-            font-size: 16px;
-        }
-        .story > p {
-            line-height: 24px;
-        }
-        
-        @media screen and (max-width: 1024px) {
-            h1 {
-                font-size: 26px;
-            }
-            .box {
-                flex-direction: column;
-                width: 100%;
-            }
-            .img1 {
-                width: 100%;
-                height: 600px;
-
-                margin: 0;
-            }
-            .story {
-                width: 100%;
-                height: auto;
-
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-            .img2 {
-                width: 100%;
-                height: 200px;
-            }
-        }
-    </style>
 </head>
-<body>
+
+<body onload="onload()">
 
 <div>
 <ins class="kakao_ad_area" style="display:none;" 
@@ -210,13 +50,13 @@ function googleSpeak(speakText) {
             <div class="img2"></div>
             <h2>Musician in Multiple Bands Complicates Scheduling Needs</h2>
             <h3>DEAR ABBY | MAY 25TH, 2021 | LETTER 1 OF 3</h3>
-<p>
+<p id="linesSec1">
 DEAR ABBY: I am in a rock band with some friends. All of us are in our 50s and 60s. We have been playing together for the last three years. Last year, our bass player joined another band (while staying in ours) because another friend was in it, but they broke up because of COVID. Now that music venues are opening up again, he has joined yet another group. I'm a loyal guy, and it bothers me that he doesn't seem as loyal to our band. He says he can easily do both, but for me, it causes booking issues because the other band will be blocking out dates that we might be able to book. I see no other conflicts. He even asked if I was interested in joining the other band, too, because he figured that if he can't be in two places at once, it might as well be both of us. Should we cut our losses and replace him? Loyalty is really important to us. -- ROCKING ON IN TEXAS
 </p>
-<P>
+<P id="linesSec2">
 DEAR ROCKING ON: Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.
 </P>
-            <button onclick="googleSpeak('Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.')">영어로 듣기</button> - <a href=https://cloud.google.com/text-to-speech target="googletts">powered by google cloud</a><br/><br/>
+            <button onclick="speakLines()">영어로 듣기</button> - <a href=https://cloud.google.com/text-to-speech target="googletts">powered by google cloud</a><br/><br/>
 <br/><br/>
         </div>
     </div>

@@ -71,21 +71,17 @@ function onload() {
     newHTMLData = "";
     for(i=0 ; i<textData1.length ; i++)
     {
-        newHTMLLine = "<a onclick='speakLine(" + i + ")'>" + textData1[i] + ". </a>";
+        newHTMLLine = "<a onclick='googleSpeak(\"" + textData1[i] + "\")'>" + textData1[i] + ".</a></br>";
         newHTMLData += newHTMLLine;
     }
     document.getElementById('linesSec1').innerHTML = newHTMLData;
     newHTMLData = "";
     for(i=0 ; i<textData2.length ; i++)
     {
-        newHTMLLine = "<a onclick='speakLine(" + i + ")'>" + textData2[i] + ". </a>";
+        newHTMLLine = "<a onclick='googleSpeak(\"" + textData2[i] + "\")'>" + textData2[i] + ".</a></br>";
         newHTMLData += newHTMLLine;
     }
     document.getElementById('linesSec2').innerHTML = newHTMLData;
-}
-
-function speakLine(iIndex) {
-    googleSpeak(linesData[iIndex]);
 }
 
 function speakLines() {
