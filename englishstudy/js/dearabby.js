@@ -59,17 +59,13 @@ let linesData;
 function onload() {
     textData1 = document.getElementById('linesSec1').innerText;
     textData1 = textData1.split(".");
-    console.log(textData1);
     textData2 = document.getElementById('linesSec2').innerText;
     textData2 = textData2.split(".");
-    console.log(textData2);
 
     linesIndex = 0;
     linesData = document.getElementById('linesSec1').innerText
         + document.getElementById('linesSec2').innerText;
-    alert(linesData);
     linesData = linesData.split(".");
-    console.log(linesData);
     linesIndexMax = linesData.length;
 
     dataIndex = 0;
@@ -92,7 +88,6 @@ function onload() {
 }
 
 function speakLine(iIndex) {
-    alert(linesData[iIndex]);
     googleSpeak(linesData[iIndex]);
 }
 

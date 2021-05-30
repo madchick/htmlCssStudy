@@ -68,18 +68,21 @@ function onload() {
     linesData = linesData.split(".");
     linesIndexMax = linesData.length;
 
+    dataIndex = 0;
     newHTMLData = "";
-    for(i=0 ; i<textData1.length ; i++)
+    for(i=0 ; i<textData1.length-1 ; i++)
     {
-        newHTMLLine = "<a onclick='speakLine(" + i + ")'>" + textData1[i] + ". </a>";
+        newHTMLLine = "<a onclick='speakLine(" + dataIndex + ")'>" + textData1[i] + ". </a>";
         newHTMLData += newHTMLLine;
+        dataIndex++ ;
     }
     document.getElementById('linesSec1').innerHTML = newHTMLData;
     newHTMLData = "";
-    for(i=0 ; i<textData2.length ; i++)
+    for(i=0 ; i<textData2.length-1 ; i++)
     {
-        newHTMLLine = "<a onclick='speakLine(" + i + ")'>" + textData2[i] + ". </a>";
+        newHTMLLine = "<a onclick='speakLine(" + dataIndex + ")'>" + textData2[i] + ". </a>";
         newHTMLData += newHTMLLine;
+        dataIndex++;
     }
     document.getElementById('linesSec2').innerHTML = newHTMLData;
 }
