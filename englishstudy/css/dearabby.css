@@ -29,14 +29,15 @@
     background-color: #e8344e;
 }
 .box {
-    width: 1000px;            
+    width: 1000px;
+    height: auto;            
 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: top;
     justify-content: center;
 
-    margin: 40px auto 0px auto;
+    margin: 40px auto 40px auto;
 }
 .img1 {
     width: 500px;
@@ -51,7 +52,7 @@
 }
 .story {
     width: 450px;
-    height: 600px;
+    height: auto;
 }
 .img2 {
     width: 450px;
