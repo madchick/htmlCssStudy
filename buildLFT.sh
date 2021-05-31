@@ -29,3 +29,5 @@ cp -rf "/Users/madchick/Projects/javascriptStudy/cityroads/dist/." "/Users/madch
 cp -rf "/Users/madchick/Projects/htmlCssStudy/animalFace/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/animalface"
 cp -rf "/Users/madchick/Projects/htmlCssStudy/luckyNewYear/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/luckyNewYear"
 cp -rf "/Users/madchick/Projects/htmlCssStudy/goodMemory/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/goodMemory"
+cp -rf "/Users/madchick/Projects/htmlCssStudy/englishstudy/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/englishstudy"
+cp -rf "/Users/madchick/Projects/htmlCssStudy/koreanstudy/." "/Users/madchick/Projects/htmlCssStudy/littlefunthings/koreanstudy"
