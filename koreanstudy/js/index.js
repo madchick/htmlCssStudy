@@ -35,12 +35,12 @@ function onload() {
 }
 
 function renderDramaList(jsonData) {
-    console.log(jsonData);
     if (jsonData!="")
     {
         dramaList = JSON.parse(jsonData);
-        console.log(dramaList);
-        newHTMLData = "<div class='item-1'><a href='kdramalinesquotes.html' class='card'><div class='thumb' style='background-image: url(./images/0101.png);'></div><article><h1>It’s Okay to Not Be Okay</h1><p>The New York Times named this romantic drama series one of The Best International Shows of 2020.</p><span>2020</span></article></a></div>";
+        newHTMLData = "";
+        for(i=0 ; i<dramaList.length ; i++)
+            newHTMLData += "<div class='item-" + i + "'><a href='kdramalinesquotes.html' class='card'><div class='thumb' style='background-image: url(" + dramaList[i].image + ");'></div><article><h1>" + dramaList[i].title + "</h1><p>" + dramaList[i].desc + "</p><span>" + dramaList[i].desc2 + "</span></article></a></div>";
         document.getElementById('kdramalist').innerHTML = newHTMLData;
     }
 }
