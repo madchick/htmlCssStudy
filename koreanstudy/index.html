@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ1TJDT1LZ"></script>
@@ -26,7 +27,7 @@
 
 </head>
 
-<body>
+<body onload="onload()">
 
 <div>
 <ins class="kakao_ad_area" style="display:none;" 
@@ -40,88 +41,8 @@
 <header>
   <h1>K-Drama favorate lines and qoutes - Listen and speak in Korean</h1>
 </header>
-<div class="band">
-  <div class="item-1">
-    <a href="kdramalinesquotes.html" class="card">
-      <div class="thumb" style="background-image: url(./images/0101.png);"></div>
-      <article>
-        <h1>It’s Okay to Not Be Okay</h1>
-        <p>The New York Times named this romantic drama series one of "The Best International Shows of 2020."</p>
-        <span>2020</span>
-      </article>
-    </a>
-  </div>
-  <div class="item-2">
-    <a href="kdramalinesquotes.html" class="card">
-      <div class="thumb" style="background-image: url(./images/0801.png);"></div>
-      <article>
-        <h1>Itaewon Class</h1>
-        <p>Based on the webtoon of the same name, Itaewon Class begins as a classic underdog story but evolves into a tale on the limits of vengeance and the strength of camaraderie. With its diverse cast, the series also openly addresses issues of discrimination based on race and gender identity.</p>
-        <span>2020</span>
-      </article>
-    </a>
-  </div>
-  <div class="item-3">
-    <a href="kdramalinesquotes.html" class="card">
-      <div class="thumb" style="background-image: url(./images/0201.png);"></div>
-      <article>
-        <h1>Sweet Home</h1>
-        <p>The Korean horror series reached #3 on Netflix's Top 10 list shortly after it's release in December 2020. Those who love the zombie genre will get hooked on this apocalyptic show.</p>
-        <span>2020</span>
-      </article>
-    </a>
-  </div>
-  <div class="item-4">
-    <a href="kdramalinesquotes.html" class="card">
-      <div class="thumb" style="background-image: url(./images/0301.png);"></div>
-      <article>
-        <h1>Crash Landing On You</h1>
-        <p>A dramatic love story, the series tells the tale of a South Korean heiress to a large conglomerate who, while paragliding, accidentally crash-lands in North Korea.</p>
-        <span>2019</span>
-      </article>
-    </a>
-  </div>
-  <div class="item-5">
-    <a href="kdramalinesquotes.html" class="card">
-      <div class="thumb" style="background-image: url(./images/0401.png);"></div>
-      <article>
-        <h1>Kingdom</h1>
-        <p>The K-drama was the first Netflix original Korean series to stream on the platform, and it has garnered positive reviews. Kingdom doesn't fit neatly into one genre, fusing political royals as well as supernatural themes into a thrilling TV series.</p>
-        <span>2019</span>
-      </article>
-    </a>
-  </div>
-  <div class="item-6">
-    <a href="kdramalinesquotes.html" class="card">
-      <div class="thumb" style="background-image: url(./images/0501.png);"></div>
-      <article>
-        <h1>Mr. Sunshine</h1>
-        <p>Contrary to its name, don't be expecting sunny days ahead in this Netflix original series that tells the story of Korea’s Joseon Dynasty era. History buffs will enjoy delving into this suspenseful, grim but also quietly romantic tale of activists fighting for Korea's independence. In addition, The Korea Times praised the series for its strong female characters.</p>
-        <span>2018</span>
-      </article>
-    </a>
-  </div>
-  <div class="item-7">
-    <a href="kdramalinesquotes.html" class="card">
-      <div class="thumb" style="background-image: url(./images/0601.png);"></div>
-      <article>
-        <h1>Stranger</h1>
-        <p>Starring one of Korea's leading actresses Bae Doona as a passionate and fearless detective, Stranger found critical acclaim with the New York Times, which listed the drama series as one of the best TV shows of 2017. Streaming on Netflix, which purchased the cable TV show for $200,000 per episode, get started watching this because apparently it's coming back for a second season this year.</p>
-        <span>2017</span>
-      </article>
-    </a>
-  </div>
-  <div class="item-8">
-    <a href="kdramalinesquotes.html" class="card">
-      <div class="thumb" style="background-image: url(./images/0701.png);"></div>
-      <article>
-        <h1>Signal</h1>
-        <p>Can't get enough of crime and detective shows like Law & Order or CSI? Signal is meant for you. Based in part on a real-life serial killer in Korea, the series revolves around a mysterious walkie talkie that allows a detective from 1986 to communicate with a modern day criminal profiler to solve cold cases.</p>
-        <span>2016</span>
-      </article>
-    </a>
-  </div>
-</div>
+
+<div id="kdramalist" class="band"></div>
 
 <br/><br/>
 
