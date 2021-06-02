@@ -105,7 +105,7 @@ function getArticleData() {
                 if (result!="")
                 {
                     quotesList = JSON.parse(result);
-                    newHTMLData = "<div class='img1' style='background-image: url(" + quotesList.image1 + ");'></div><div class='story'><div class='img2' style='background-image: url(" + quotesList.image1 + ");'></div><h2>" + quotesList.title + "</h2><h3>" + quotesList.info + "</h3><p id='linesSec1'>" + quotesList.lines[0].linesSec1 + "</p><P id='linesSec2'>" + quotesList.lines[0].linesSec2 + "</P><button onclick='speakLines()'>영어로 듣기</button> - <a href=https://cloud.google.com/text-to-speech target='googletts'>powered by google cloud</a><br/></div>";
+                    newHTMLData = "<div class='img1' style='background-image: url(" + quotesList.image1 + ");'></div><div class='story'><div class='img2' style='background-image: url(" + quotesList.image2 + ");'></div><h2>" + quotesList.title + "</h2><h3>" + quotesList.info + "</h3><p id='linesSec1'>" + quotesList.lines[0].linesSec1 + "</p><P id='linesSec2'>" + quotesList.lines[0].linesSec2 + "</P><button onclick='speakLines()'>영어로 듣기</button> - <a href=https://cloud.google.com/text-to-speech target='googletts'>powered by google cloud</a><br/></div>";
                     document.getElementById('databox').innerHTML = newHTMLData;
                     renderArticles();
                 }

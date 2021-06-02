@@ -89,7 +89,7 @@ function onload() {
                 if (result!="")
                 {
                     quotesList = JSON.parse(result);
-                    newHTMLData = "<div class='img1' style='background-image: url(" + quotesList.image1 + ");'></div><div class='story'><div class='img2' style='background-image: url(" + quotesList.image1 + ");'></div><h2>" + quotesList.title + "</h2><h3>" + quotesList.info + "</h3><p id='linesSec1'>" + quotesList.lines[0].linesSec1 + "</p><P id='linesSec2'>" + quotesList.lines[0].linesSec2 + "</P><button onclick='speakLines()'>Listen</button></br><center><a href='https://developers.kakao.com/docs/latest/ko/voice/common' target='kakaotts'><img src='./images/voice_logo.png' width='350'></a></center><br/></div>";
+                    newHTMLData = "<div class='img1' style='background-image: url(" + quotesList.image1 + ");'></div><div class='story'><div class='img2' style='background-image: url(" + quotesList.image2 + ");'></div><h2>" + quotesList.title + "</h2><h3>" + quotesList.info + "</h3><p id='linesSec1'>" + quotesList.lines[0].linesSec1 + "</p><P id='linesSec2'>" + quotesList.lines[0].linesSec2 + "</P><button onclick='speakLines()'>Listen</button></br><center><a href='https://developers.kakao.com/docs/latest/ko/voice/common' target='kakaotts'><img src='./images/voice_logo.png' width='350'></a></center><br/></div>";
                     document.getElementById('databox').innerHTML = newHTMLData;
                     renderQuotes();
                 }
