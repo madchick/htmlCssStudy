@@ -27,7 +27,7 @@
     
 </head>
 
-<body onload="onload()">
+<body onload="getArticleData()">
 
 <div>
 <ins class="kakao_ad_area" style="display:none;" 
@@ -44,21 +44,7 @@
         <h1>Dear Abby - 영어 기사 듣기 (리스닝 연습)</h1>
         <a class="btn" href="index.html">전체 리스트 보러가기 ></a>
     </div>
-    <div class="box">
-        <div class="img1" style="background-image: url(./images/image.jpg);"></div>
-        <div class="story">
-            <div class="img2" style="background-image: url(./images/image.jpg);"></div>
-            <h2>Musician in Multiple Bands Complicates Scheduling Needs</h2>
-            <h3>DEAR ABBY | MAY 25TH, 2021 | LETTER 1 OF 3</h3>
-<p id="linesSec1">
-DEAR ABBY: I am in a rock band with some friends. All of us are in our 50s and 60s. We have been playing together for the last three years. Last year, our bass player joined another band (while staying in ours) because another friend was in it, but they broke up because of COVID. Now that music venues are opening up again, he has joined yet another group. I'm a loyal guy, and it bothers me that he doesn't seem as loyal to our band. He says he can easily do both, but for me, it causes booking issues because the other band will be blocking out dates that we might be able to book. I see no other conflicts. He even asked if I was interested in joining the other band, too, because he figured that if he can't be in two places at once, it might as well be both of us. Should we cut our losses and replace him? Loyalty is really important to us. -- ROCKING ON IN TEXAS.
-</p>
-<P id="linesSec2">
-DEAR ROCKING ON: Because you feel that loyalty is paramount and your friend may have scheduling conflicts because of his participation with the other band(s), yes, he should be replaced with a musician you can rely on.
-</P>
-            <button onclick="speakLines()">영어로 듣기</button> - <a href=https://cloud.google.com/text-to-speech target="googletts">powered by google cloud</a><br/>
-        </div>
-    </div>
+    <div id="databox" class="box"></div>
 
 <div>
 <ins class="kakao_ad_area" style="display:none;" 

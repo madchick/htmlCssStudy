@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="./css/index.css" media="screen">
     <link rel="stylesheet" href="./css/nicepage.css" media="screen">
+    <script src="./js/index.js"></script>
     
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ1TJDT1LZ"></script>
@@ -27,7 +28,7 @@
 
 </head>
 
-<body>
+<body onload="getArticleList()">
 
 <div>
 <ins class="kakao_ad_area" style="display:none;" 
@@ -47,38 +48,7 @@
 <section class="u-clearfix u-image u-section-1" id="carousel_da17" data-image-width="1980" data-image-height="1200">
 <img src="images/fv-min.jpg" alt="" class="u-expanded-height-lg u-expanded-height-md u-expanded-height-sm u-expanded-height-xl u-image u-image-default u-image-1" data-image-width="1051" data-image-height="1114">
 <div class="u-list u-list-1">
-    <div class="u-repeater u-repeater-1">
-        <div class="u-container-style u-grey-10 u-list-item u-repeater-item u-video-cover u-list-item-1">
-            <a href="dearabby.html">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                <h2 class="u-custom-font u-text u-text-default u-text-1">Mother Feels Betrayed When Son Wants To Live With Ex</h2>
-                <p class="u-text u-text-2">DEAR ABBY: My ex-husband and I have two sons together who are 14 and 16. I have always kept things amicable for the kids' sake, but it came at a high price. I took a lot less in the divorce than I was...</p>
-                <p class="u-text u-text-2">DEAR ABBY | JUNE 2ND, 2021 | LETTER 1 OF 3</p>
-                <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-1"></div>
-            </div>
-            </a>
-        </div>
-        <div class="u-container-style u-grey-10 u-list-item u-repeater-item u-video-cover u-list-item-2">
-            <a href="dearabby.html">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                <h2 class="u-custom-font u-text u-text-default u-text-3">Wife Wants Nothing To Do With Husband's Two-Timing Friend</h2>
-                <p class="u-text u-text-4">DEAR ABBY: My husband has a close friend I'll call "Al." (We are like family.) Over the past five months, Al has been seeing two women and sleeping with both of them. Neither one knows about the other...</p>
-                <p class="u-text u-text-2">DEAR ABBY | JUNE 2ND, 2021 | LETTER 2 OF 3</p>
-                <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-2"></div>
-            </div>
-            </a>
-        </div>
-        <div class="u-container-style u-grey-10 u-list-item u-repeater-item u-list-item-3">
-            <a href="dearabby.html">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                <h2 class="u-custom-font u-text u-text-default u-text-5">Sisters React Differently in Longtime Rift With Mom</h2>
-                <p class="u-text u-text-6">DEAR ABBY: Seventeen years ago, when my sister "Elise" and I were 19 and 25, our mother kicked us both out. I have long since forgiven her, and I have a happy relationship with her. Elise, on the othe...</p>
-                <p class="u-text u-text-2">DEAR ABBY | JUNE 2ND, 2021 | LETTER 3 OF 3</p>
-                <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-3"></div>
-            </div>
-            </a>
-        </div>
-    </div>
+    <div id="articleList" class="u-repeater u-repeater-1"></div>
 </div>
 </section>
 
