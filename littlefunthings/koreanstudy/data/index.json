@@ -1,13 +1,13 @@
 [
     {
-        "dramaid": "0008",
+        "dramaid": "0001",
         "image": "./images/0101.png",
         "title": "It’s Okay to Not Be Okay", 
         "desc": "The New York Times named this romantic drama series one of The Best International Shows of 2020.", 
         "desc2": "2020"
     },
     {
-        "dramaid": "0007",  
+        "dramaid": "0008",  
         "image": "./images/0801.png", 
         "title": "Itaewon Class", 
         "desc": "Based on the webtoon of the same name, Itaewon Class begins as a classic underdog story but evolves into a tale on the limits of vengeance and the strength of camaraderie. With its diverse cast, the series also openly addresses issues of discrimination based on race and gender identity.", 
