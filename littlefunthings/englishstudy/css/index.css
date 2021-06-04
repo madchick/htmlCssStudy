@@ -4,8 +4,7 @@
 }
 
 .u-section-1 .u-image-1 {
-  left: auto;
-  margin: 50px 0 0 auto;
+  position: absolute;
 }
 
 .u-section-1 .u-list-1 {
@@ -193,7 +192,6 @@
   }
 
   .u-section-1 .u-list-1 {
-    margin-top: -1164px;
     margin-bottom: 60px;
     margin-left: calc(((100% - 340px) / 2));
   }
