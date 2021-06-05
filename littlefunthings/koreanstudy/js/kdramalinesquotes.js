@@ -112,19 +112,24 @@ function renderQuotes() {
     newHTMLData = "";
     for(i=0 ; i<linesIndexMax ; i++)
     {
-        newHTMLLine = "<a onclick='kakaoSpeak(\"" + linesData[i] + "\")'>" + linesData[i] + "</a></br>";
+        iLength = linesData[i].length;
+        newHTMLLine = "<a onclick='kakaoSpeak(\"" + linesData[i].substring(3,iLength) + "\")'>" + linesData[i] + "</a></br></br>";
         newHTMLData += newHTMLLine;
     }
     document.getElementById('linesSec2').innerHTML = newHTMLData;
 }
 
 function speakLines() {
-    kakaoSpeak(linesData[linesIndex]);
+    iLength = linesData[linesIndex].length;
+    speakText = linesData[linesIndex].substring(3,iLength);
+    kakaoSpeak(speakText);
     let aud = document.getElementById("kakaoSpeak");
     aud.onended = function() {
         linesIndex++;
+        iLength = linesData[linesIndex].length;
+        speakText = linesData[linesIndex].substring(3,iLength);
         if(linesIndex<linesIndexMax) {
-            kakaoSpeak(linesData[linesIndex]);
+            kakaoSpeak(speakText);
         }
         else {
             this.onended = null;
