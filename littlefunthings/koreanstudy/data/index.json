@@ -14,14 +14,14 @@
         "desc2": "JTBC | 16부작 | 2020.01.31 ~ 03.21"
     },
     {
-        "dramaid": "0006",  
+        "dramaid": "0002",  
         "image": "./images/0201.png",
         "title": "Sweet Home", 
         "desc": "The Korean horror series reached #3 on Netflix's Top 10 list shortly after it's release in December 2020. Those who love the zombie genre will get hooked on this apocalyptic show.", 
         "desc2": "Netflix | 10부작 | 2020.12.18"
     },
     {
-        "dramaid": "0005",  
+        "dramaid": "0003",  
         "image": "./images/0301.png",
         "title": "Crash Landing On You", 
         "desc": "A dramatic love story, the series tells the tale of a South Korean heiress to a large conglomerate who, while paragliding, accidentally crash-lands in North Korea.", 
@@ -35,21 +35,21 @@
         "desc2": "Netflix | 6부작 | 2019.1.25"
     },
     {
-        "dramaid": "0003",  
+        "dramaid": "0005",  
         "image": "./images/0501.png", 
         "title": "Mr. Sunshine", 
         "desc": "Contrary to its name, don't be expecting sunny days ahead in this Netflix original series that tells the story of Korea’s Joseon Dynasty era. History buffs will enjoy delving into this suspenseful, grim but also quietly romantic tale of activists fighting for Korea's independence. In addition, The Korea Times praised the series for its strong female characters.", 
         "desc2": "tvN | 24부작 | 2018.07.07 ~ 09.30"
     },
     {
-        "dramaid": "0002",  
+        "dramaid": "0006",  
         "image": "./images/0601.png",
         "title": "Stranger", 
         "desc": "Starring one of Korea's leading actresses Bae Doona as a passionate and fearless detective, Stranger found critical acclaim with the New York Times, which listed the drama series as one of the best TV shows of 2017. Streaming on Netflix, which purchased the cable TV show for $200,000 per episode, get started watching this because apparently it's coming back for a second season this year.", 
         "desc2": "tvN | 16부작 | 2017.06.10 ~ 07.30"
     },
     {
-        "dramaid": "0001",  
+        "dramaid": "0007",  
         "image": "./images/0701.png", 
         "title": "Signal", 
         "desc": "Can't get enough of crime and detective shows like Law & Order or CSI? Signal is meant for you. Based in part on a real-life serial killer in Korea, the series revolves around a mysterious walkie talkie that allows a detective from 1986 to communicate with a modern day criminal profiler to solve cold cases.", 
