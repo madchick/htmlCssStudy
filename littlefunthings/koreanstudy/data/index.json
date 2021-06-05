@@ -1,5 +1,12 @@
 [
     {
+        "dramaid": "0002",  
+        "image": "./images/0201.png",
+        "title": "Sweet Home", 
+        "desc": "The Korean horror series reached #3 on Netflix's Top 10 list shortly after it's release in December 2020. Those who love the zombie genre will get hooked on this apocalyptic show.", 
+        "desc2": "Netflix | 10부작 | 2020.12.18"
+    },
+    {
         "dramaid": "0001",
         "image": "./images/0101.png",
         "title": "It’s Okay to Not Be Okay", 
@@ -12,13 +19,6 @@
         "title": "Itaewon Class", 
         "desc": "Based on the webtoon of the same name, Itaewon Class begins as a classic underdog story but evolves into a tale on the limits of vengeance and the strength of camaraderie. With its diverse cast, the series also openly addresses issues of discrimination based on race and gender identity.", 
         "desc2": "JTBC | 16부작 | 2020.01.31 ~ 03.21"
-    },
-    {
-        "dramaid": "0002",  
-        "image": "./images/0201.png",
-        "title": "Sweet Home", 
-        "desc": "The Korean horror series reached #3 on Netflix's Top 10 list shortly after it's release in December 2020. Those who love the zombie genre will get hooked on this apocalyptic show.", 
-        "desc2": "Netflix | 10부작 | 2020.12.18"
     },
     {
         "dramaid": "0003",  
@@ -42,11 +42,25 @@
         "desc2": "tvN | 24부작 | 2018.07.07 ~ 09.30"
     },
     {
+        "dramaid": "0009",  
+        "image": "./images/0901.png",
+        "title": "My Mister", 
+        "desc": "A man in his 40's withstands the weight of life. A woman in her 20's goes through different experiences, but also withstands the weight of her life. The man and woman get together to help each other.", 
+        "desc2": "tvN | 16부작 | 2018.03.21 ~ 05.17"
+    },
+    {
         "dramaid": "0006",  
         "image": "./images/0601.png",
         "title": "Stranger", 
         "desc": "Starring one of Korea's leading actresses Bae Doona as a passionate and fearless detective, Stranger found critical acclaim with the New York Times, which listed the drama series as one of the best TV shows of 2017. Streaming on Netflix, which purchased the cable TV show for $200,000 per episode, get started watching this because apparently it's coming back for a second season this year.", 
         "desc2": "tvN | 16부작 | 2017.06.10 ~ 07.30"
+    },
+    {
+        "dramaid": "0010",  
+        "image": "./images/1001.png",
+        "title": "Guardian: The Lonely and Great God", 
+        "desc": "In his quest for a bride to break his immortal curse, Dokkaebi, a 939-year-old guardian of souls, meets a grim reaper and a sprightly student with a tragic past.", 
+        "desc2": "tvN | 16부작 | 2016.12.02 ~ 2017.01.21"
     },
     {
         "dramaid": "0007",  
