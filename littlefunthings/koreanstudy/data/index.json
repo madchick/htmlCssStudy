@@ -1,10 +1,38 @@
 [
     {
+        "dramaid": "0030",  
+        "image": "./images/3001.png",
+        "title": "Mine",
+        "desc": "Encaged in a gold-clad life of secrets and lies, two women in a conglomerate family seek to topple all that stands in their way of finding true joy.", 
+        "desc2": "tvN | 16부작 | 2021.05.08 ~ 06.27"
+    },
+    {
+        "dramaid": "0029",  
+        "image": "./images/2901.png",
+        "title": "Law School",
+        "desc": "When a grim incident occurs at their prestigious school, justice through law is put to a test by a tough law professor and his ambitious students.", 
+        "desc2": "JTBC | 16부작 | 2021.04.14 ~ 06.09"
+    },
+    {
+        "dramaid": "0028",  
+        "image": "./images/2801.png",
+        "title": "Vincenzo",
+        "desc": "During a visit to his motherland, a Korean-Italian mafia lawyer gives an unrivaled conglomerate a taste of its own medicine with a side of justice.", 
+        "desc2": "tvN | 20부작 | 2021.02.20 ~ 05.02"
+    },
+    {
         "dramaid": "0002",  
         "image": "./images/0201.png",
-        "title": "Sweet Home", 
+        "title": "Sweet Home",
         "desc": "The Korean horror series reached #3 on Netflix's Top 10 list shortly after it's release in December 2020. Those who love the zombie genre will get hooked on this apocalyptic show.", 
         "desc2": "Netflix | 10부작 | 2020.12.18"
+    },
+    {
+        "dramaid": "0027",  
+        "image": "./images/2701.png",
+        "title": "The Uncanny Counter",
+        "desc": "Noodle shop employees by day and demon hunters by night, the Counters use special abilities to chase down malevolent spirits that prey on humans.", 
+        "desc2": "OCN | 16부작 | 2020.11.28 ~ 2021.01.24"
     },
     {
         "dramaid": "0001",
