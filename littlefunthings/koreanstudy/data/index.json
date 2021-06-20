@@ -1,5 +1,26 @@
 [
     {
+        "dramaid": "0033",  
+        "image": "./images/3301.png",
+        "title": "Nevertheless",
+        "desc": "It depicts a hyper realistic romance between a man who is annoyed with relationships but likes to flirt and a woman who wants to date but does not believe in love.", 
+        "desc2": "JTBC  | 10부작 | 2021.06.19 ~ "
+    },
+    {
+        "dramaid": "0032",  
+        "image": "./images/3201.png",
+        "title": "Mad for Each Other",
+        "desc": "Bothered to realize they are next-door neighbors and share a psychiatrist, a man and a woman find it's impossible to stay out of each other's way.", 
+        "desc2": "kakaoTV | 13부작 |  2021.05.24 ~ "
+    },
+    {
+        "dramaid": "0031",  
+        "image": "./images/3101.png",
+        "title": "Move to Heaven",
+        "desc": "Finding life in all that’s left behind, a detail-oriented trauma cleaner and his estranged uncle deliver untold stories of the departed to loved ones.", 
+        "desc2": "Netflix | 10부작 | 2021.05.14"
+    },
+    {
         "dramaid": "0030",  
         "image": "./images/3001.png",
         "title": "Mine",
@@ -35,11 +56,46 @@
         "desc2": "OCN | 16부작 | 2020.11.28 ~ 2021.01.24"
     },
     {
+        "dramaid": "0026",
+        "image": "./images/2601.png",
+        "title": "Start-Up", 
+        "desc": "Young entrepreneurs aspiring to launch virtual dreams into reality compete for success and love in the cutthroat world of Korea's high-tech industry.", 
+        "desc2": "tvN | 16부작 | 2020.10.17 ~ 12.06"
+    },
+    {
+        "dramaid": "0025",
+        "image": "./images/2501.png",
+        "title": "The School Nurse Files", 
+        "desc": "Wielding a light-up sword through the dark corners of a high school, a nurse with an unusual gift protects students from monsters only she can see.", 
+        "desc2": "Netflix | 6부작 | 2020.09.25"
+    },
+    {
+        "dramaid": "0024",
+        "image": "./images/2401.png",
+        "title": "The Good Detective", 
+        "desc": "A drama about the race between people who want to get closer to the truth and those who want to cover it up.", 
+        "desc2": "JTBC | 16부작 | 2020.07.06 ~ 08.25"
+    },
+    {
         "dramaid": "0001",
         "image": "./images/0101.png",
         "title": "It’s Okay to Not Be Okay", 
         "desc": "The New York Times named this romantic drama series one of The Best International Shows of 2020.", 
         "desc2": "tvN | 16부작 | 2020.06.20 ~ 08.09"
+    },
+    {
+        "dramaid": "0023",  
+        "image": "./images/2301.png", 
+        "title": "Extracurricular", 
+        "desc": "A model high school student who's steeped in a world of serious crime finds his double life upended when a classmate takes an interest in his secret.", 
+        "desc2": "Netflix | 10부작 | 2020.04.29"
+    },
+    {
+        "dramaid": "0022",  
+        "image": "./images/2201.png", 
+        "title": "Hospital Playlist", 
+        "desc": "Hospital Playlist tells the story of five doctors who have been friends since they entered medical school in 1999.", 
+        "desc2": "tvN | 12부작 | 2020.03.12 ~ 05.28"
     },
     {
         "dramaid": "0008",  
@@ -63,11 +119,25 @@
         "desc2": "Netflix | 6부작 | 2019.1.25"
     },
     {
+        "dramaid": "0021",  
+        "image": "./images/2101.png", 
+        "title": "Sky Castle", 
+        "desc": "A satirical drama that closely looks at the materialistic desires of the upper-class parents in South Korea and how they ruthlessly secure the successes of their families at the cost of destroying others' lives.", 
+        "desc2": "JTBC | 20부작 | 2018.11.23 ~ 2019.02.01"
+    },
+    {
         "dramaid": "0005",  
         "image": "./images/0501.png", 
         "title": "Mr. Sunshine", 
         "desc": "Contrary to its name, don't be expecting sunny days ahead in this Netflix original series that tells the story of Korea’s Joseon Dynasty era. History buffs will enjoy delving into this suspenseful, grim but also quietly romantic tale of activists fighting for Korea's independence. In addition, The Korea Times praised the series for its strong female characters.", 
         "desc2": "tvN | 24부작 | 2018.07.07 ~ 09.30"
+    },
+    {
+        "dramaid": "0020",  
+        "image": "./images/2001.png",
+        "title": "Ms. Hammurabi", 
+        "desc": "The series tells the story of the life of judges and the various disputes that they have to settle.", 
+        "desc2": "JTBC | 16부작 | 2018.05.21 ~ 07.16"
     },
     {
         "dramaid": "0009",  
@@ -91,10 +161,73 @@
         "desc2": "tvN | 16부작 | 2016.12.02 ~ 2017.01.21"
     },
     {
+        "dramaid": "0019",  
+        "image": "./images/1901.png", 
+        "title": "Dear My Friends", 
+        "desc": "Depict the life story of the ones in their twilight years, who raise their voices as It's not over. We're still alive.", 
+        "desc2": "tvN | 16부작 | 2016.05.13 ~ 07.02"
+    },
+    {
+        "dramaid": "0018",  
+        "image": "./images/1801.png", 
+        "title": "Another Miss Oh", 
+        "desc": "A romantic television series about two women who not only share the same name Oh Hae Young but they also share a destiny with the same man, Park Do Kyung, who can see the future.", 
+        "desc2": "tvN | 18부작 | 2016.05.02 ~ 06.28"
+    },
+    {
+        "dramaid": "0017",  
+        "image": "./images/1701.png", 
+        "title": "Descendants of the Sun", 
+        "desc": "This drama tells of the love story that develops between a surgeon and a special forces officer.", 
+        "desc2": "KBS2 | 16부작 | 2016.02.24 ~ 04.14"
+    },
+    {
         "dramaid": "0007",  
         "image": "./images/0701.png", 
         "title": "Signal", 
         "desc": "Can't get enough of crime and detective shows like Law & Order or CSI? Signal is meant for you. Based in part on a real-life serial killer in Korea, the series revolves around a mysterious walkie talkie that allows a detective from 1986 to communicate with a modern day criminal profiler to solve cold cases.", 
         "desc2": "tvN | 16부작 | 2016.01.22 ~ 03.12"
+    },
+    {
+        "dramaid": "0016",  
+        "image": "./images/1601.png", 
+        "title": "Reply 1988", 
+        "desc": "Follows the lives of 5 families living on the same street in a neighbourhood called Ssangmundong in Seoul. It takes a nostalgic look back at the year 1988.", 
+        "desc2": "tvN | 20부작 | 2015.11.06 ~ 2016.01.16"
+    },
+    {
+        "dramaid": "0015",  
+        "image": "./images/1501.png", 
+        "title": "It's Okay, That's Love", 
+        "desc": "A love story between a psychiatrist named Ji Hae Soo and an author who had schizophrenia named Jang Jae Yeol.", 
+        "desc2": "SBS | 16부작 | 2014.07.23 ~ 09.11"
+    },
+    {
+        "dramaid": "0014",  
+        "image": "./images/1401.png", 
+        "title": "Secret Affair", 
+        "desc": "A love story of a young poor student pianist fell in love with his piano teacher, who was married to another man. Despite disapproval from the society and the moral standard, their pure love for each other only grew stronger. Could she give up her status that she had long fought for?", 
+        "desc2": "JTBC | 16부작 | 2014.03.17 ~ 05.13"
+    },
+    {
+        "dramaid": "0013",  
+        "image": "./images/1301.png", 
+        "title": "My Love from the Star", 
+        "desc": "Do Min-Joon, an alien that came to our planet 400 years ago, will be able to return to his planet in 3 months, but when he meets famous actress Chun Song-Yi, all the centuries he spent distancing himself from humans come to an end.", 
+        "desc2": "SBS | 21부작 | 2013.12.18 ~ 2014.02.27"
+    },
+    {
+        "dramaid": "0012",  
+        "image": "./images/1201.png", 
+        "title": "The Heirs", 
+        "desc": "After a chance encounter in LA, two teens from different social backgrounds reunite at an exclusive high school attended by Korea's über rich.", 
+        "desc2": "SBS | 20부작 | 2013.10.09 ~ 12.12"
+    },
+    {
+        "dramaid": "0011",  
+        "image": "./images/1101.png", 
+        "title": "Golden Time", 
+        "desc": "The one hour you have to save a person's life after a traumatic injury is what emergency physicians call golden time.", 
+        "desc2": "MBC | 23부작 | 2012.07.09 ~ 09.25"
     }
 ]
